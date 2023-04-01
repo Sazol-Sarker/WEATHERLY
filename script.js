@@ -26,6 +26,19 @@ const getWeatherReport = (city) => {
             wind_speed.innerHTML = response.wind_speed
             wind_speedhd.innerHTML = response.wind_speed
 
+            var tempid = response.temp;
+            var div1 = document.getElementById("hotId");
+            var div2 = document.getElementById("coldId");
+
+            if (tempid > 20) {
+                div1.style.display = "block";
+                div2.style.display = "none";
+            }
+            else {
+                div2.style.display = "block";
+                div1.style.display = "none";
+            }
+
         })
         .catch(err => console.error(err));
     //1st
