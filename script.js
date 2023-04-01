@@ -25,7 +25,8 @@ const getWeatherReport = (city) => {
             temphd.innerHTML = response.temp
             wind_speed.innerHTML = response.wind_speed
             wind_speedhd.innerHTML = response.wind_speed
-
+            
+            // temperature thresholding
             var tempid = response.temp;
             var div1 = document.getElementById("hotId");
             var div2 = document.getElementById("coldId");
@@ -38,6 +39,35 @@ const getWeatherReport = (city) => {
                 div2.style.display = "block";
                 div1.style.display = "none";
             }
+
+            // humidity thresholding
+            var humidid = response.humidity;
+            var div3 = document.getElementById("stikyHumId");
+            var div4 = document.getElementById("idealHumId");
+
+            if (humidid >=65 || humidid<=30 ) {
+                div3.style.display = "block";
+                div4.style.display = "none";
+            }
+            else {
+                div4.style.display = "block";
+                div3.style.display = "none";
+            }
+
+            // Wind condition thresholding 
+            var winid = response.wind_speed;
+            var div5 = document.getElementById("loWinId");
+            var div6 = document.getElementById("hiWinId");
+
+            if (winid <40) {
+                div5.style.display = "block";
+                div6.style.display = "none";
+            }
+            else {
+                div6.style.display = "block";
+                div5.style.display = "none";
+            }
+
 
         })
         .catch(err => console.error(err));
