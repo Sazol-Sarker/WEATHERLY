@@ -2,7 +2,7 @@
 # WEATHERLY
 
 **WEATHERLY** is a weather forecast website using **RAPID API.** 
-This is a fully functional of website that aims to **provide LIVE weather report on different cities over the world on **
+This is a fully functional of website that aims to **provide LIVE weather report on different cities over the world on**
 
 
 ## Badges
