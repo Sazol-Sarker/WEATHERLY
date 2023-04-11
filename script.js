@@ -190,3 +190,12 @@ submit.addEventListener("click", (e) => {
 
 getWeatherReport("Dhaka")
 
+
+var typed = new Typed('.auto-type', {
+    strings: ["Weather of Nearby other places...."],
+    typeSpeed: 80,
+    backSpeed: 80,
+    loop: true,
+    loopCOunt: Infinity
+});
+
